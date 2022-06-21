@@ -1,0 +1,51 @@
+@charset "UTF-8";
+#headerWrap {
+  position: relative;
+  width: 100%;
+  /* 화면 크기와 동일하게 맞춰준다. 전체크기를 */
+  height: 40vw;
+  /* 높이 고정 */
+  overflow: hidden;
+  /* 이미지의 크기가 크면 나머지 부분 삭제 */
+}
+
+#headerWrap #banner {
+  position: absolute;
+  /* 화면 감소시 이미지 크기는 right, left 포지션값에 의해 결정된다. */
+  /* 포지션값을 -200% 시킴으로써 화면이 줄어들어도 이미지 크기가 감소하는 right, left 값이 되지 않음 */
+  top: 0;
+  right: -200%;
+  bottom: 0;
+  left: -200%;
+}
+
+#headerWrap #banner img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 1920px) {
+  #banner {
+    text-align: left;
+    left: -255px;
+  }
+  nav {
+    position: absolute;
+    display: inline;
+    width: 100%;
+  }
+  nav img {
+    width: 5vw;
+    height: 2vw;
+    display: inline;
+    float: left;
+  }
+  nav ul li {
+    display: inline-block;
+    font-size: 1.4vw;
+    vertical-align: center;
+  }
+}
+/*# sourceMappingURL=index.css.map */
